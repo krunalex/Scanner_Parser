@@ -5,8 +5,9 @@ import pizzaprojekt.model.food.Salad;
 public class SaladStorage {
 
     private double abundance = 100;
-    private int numberKit = 10; //anzahl muss angepasst werden
+    private int numberKit = 35;
     private double abundancePrice = 10;
+  //  private Doepi myDoepi;
 
     public SaladStorage(){
 
@@ -39,12 +40,10 @@ public class SaladStorage {
     public void createSalad(int saladType){
         numberKit--;
         Salad s = new Salad(saladType);
-        /* Dafür brauchen wir zugriff auf Geld
-        Geld++;
-        if(numberKit == 0){
-        numberKit = 10;
-        Geld = Geld - 10;
-        }
-        */
+        //toDo Geld implememtieren, ein Budget für Doepi
+       /* if(numberKit == 0){
+            numberKit = 10;
+            // myDoepi.setMoney(-10);
+        } */
     }
 }

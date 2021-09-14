@@ -10,6 +10,11 @@ import javax.swing.*;
 
 public class Doepi {
 
+    private double money = 1000;
+    private JFrame myFrame;
+    private startInterface interface1;
+    private loginInterface interface2;
+
     public static void main(String[] args) {
         //todo Worker erstellen
         App myApp = new App();
@@ -44,5 +49,13 @@ public class Doepi {
             break;
         }
         myFrame.revalidate();
+    }
+
+    public double getMoney(){
+        return money;
+    }
+
+    public void setMoney(double money){
+        this.money = money;
     }
 }

@@ -1,6 +1,7 @@
 package pizzaprojekt.model.people;
 
 public class Guest extends Human {
+
     private String username;
     private String password;
     private String favoriteFood;
