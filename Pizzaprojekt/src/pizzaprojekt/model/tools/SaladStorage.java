@@ -1,6 +1,6 @@
-package Pizzaprojekt.model.Tools;
+package pizzaprojekt.model.tools;
 
-import Pizzaprojekt.model.Food.Salad;
+import pizzaprojekt.model.food.Salad;
 
 public class SaladStorage {
 

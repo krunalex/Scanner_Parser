@@ -1,4 +1,4 @@
-package Pizzaprojekt.model.Food;
+package pizzaprojekt.model.food;
 
 public abstract class MenuCard {
 
@@ -6,7 +6,7 @@ public abstract class MenuCard {
     protected boolean orderReady;
     protected String[] ingredians;
 
-    public MenuCard(){
+    public MenuCard(){ //todo Parameter fehlen
         this.price = price;
         this.orderReady = orderReady;
         this.ingredians = ingredians;

@@ -1,4 +1,4 @@
-package Pizzaprojekt.model.Tools;
+package pizzaprojekt.model.tools;
 
 public class KebabSkewer {
 
@@ -30,7 +30,7 @@ public class KebabSkewer {
 
     public void consume(double status){
         if (getConsumed == true){
-            setStatus(-1.5); // Weiß nicht ob das so klappt - A.
+            status = status - 1.5; // Weiß nicht ob das so klappt - A.
         }
     }
 

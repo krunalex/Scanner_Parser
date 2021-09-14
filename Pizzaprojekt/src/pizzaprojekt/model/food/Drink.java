@@ -1,4 +1,4 @@
-package Pizzaprojekt.model.Food;
+package pizzaprojekt.model.food;
 
 public abstract class Drink extends MenuCard {
 

@@ -1,4 +1,4 @@
-package Pizzaprojekt.model.People;
+package pizzaprojekt.model.people;
 
 public abstract class Human {
     protected String forename;

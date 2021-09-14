@@ -1,8 +1,10 @@
-package Pizzaprojekt.model.People;
+package pizzaprojekt.model.people;
 
-import Pizzaprojekt.model.Tools.Furnace;
-import Pizzaprojekt.model.Tools.KebabSkewer;
-import Pizzaprojekt.model.Tools.SaladStorage;
+import pizzaprojekt.model.food.Drink;
+import pizzaprojekt.model.tools.Furnace;
+import pizzaprojekt.model.tools.KebabSkewer;
+import pizzaprojekt.model.tools.SaladStorage;
+
 
 public class Worker extends Human {
     private Furnace furnace;

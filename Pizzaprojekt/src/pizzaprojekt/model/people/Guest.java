@@ -1,4 +1,4 @@
-package Pizzaprojekt.model.People;
+package pizzaprojekt.model.people;
 
 public class Guest extends Human {
     private String username;

@@ -1,6 +1,6 @@
-package Pizzaprojekt.model.Tools;
+package pizzaprojekt.model.tools;
 
-import Pizzaprojekt.model.Food.Pizza;
+import pizzaprojekt.model.food.Pizza;
 
 public class Furnace {
     private double timer;
