@@ -39,7 +39,21 @@ public class Worker extends Human {
         return saladStorage;
     }
 
-    public void processOrder(){
-
+    public void processOrder(int food, int type){
+        switch(food){
+            case 1: kebabSkewer.makeDoener(type);
+            break;
+            case 2:
+                try {
+                    furnace.bake(type);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                break;
+            case 3: saladStorage.createSalad(type);
+            break;
+            case 4: Drink drink = new Drink(type);
+            break;
+        }
     }
 }

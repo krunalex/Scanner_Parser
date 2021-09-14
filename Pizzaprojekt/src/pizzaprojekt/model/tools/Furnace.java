@@ -5,11 +5,11 @@ import pizzaprojekt.model.food.Pizza;
 public class Furnace {
     private double timer;
     private boolean available;
-    Pizza pizza = new Pizza();
 
     public Furnace(){
         this.timer = timer;
         this.available = available;
+
     }
 
     public double getTimer(){
@@ -28,9 +28,13 @@ public class Furnace {
         this.available = available;
     }
 
-    public void bake() throws InterruptedException {
-        wait(5000);
-        pizza.setOrderReady(true);
+    public void bake(int type) throws InterruptedException {
+        if(getAvailable()){
+            setAvailable(false);
+            wait(500);
+            Pizza pizza = new Pizza(type);
+        }
+        setAvailable(true);
     }
 
 

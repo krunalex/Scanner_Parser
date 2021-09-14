@@ -34,6 +34,10 @@ public class KebabSkewer {
         }
     }
 
+    public void makeDoener(int type){
+        consume(status);
+    }
+
     public void change(){
         if (status <= 0){
             skewerLeft = skewerLeft - 1;

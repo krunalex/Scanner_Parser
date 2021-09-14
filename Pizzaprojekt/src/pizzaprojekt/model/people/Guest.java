@@ -7,6 +7,8 @@ public class Guest extends Human {
     private String favoriteFood;
     private double budget; // Todo: In der App sein Budget angeben
     private String[][] orders;
+    private String[] lastTenOrders = new String[10];
+    int i = 0;
 
     public Guest(){
         this.username = username;
@@ -22,14 +24,22 @@ public class Guest extends Human {
     }
 
     public void doOrder(int Meal, int Type){
-        orders = new String[3][2];//zum Speichern der letzten 10 kann man einen weiteren array anlegen um die Zahlen zu speichern
+        orders = new String[4][2];
         orders[0][0] = "Doener ohne alles ";
         orders[0][1] = "Doener mit alles ";
         orders[1][0] = "Pizza Magarita ";
         orders[1][1] = "Thunfischpizza";
         orders[2][0] = "Salat ";
-        orders[2][1] = "Salat ohne Zwiebeln ";
+        orders[2][1] = "Salat ohne Kaese ";
+        orders[3][0] = "Wasser";
         System.out.println("Ich will " + orders[Meal][Type] + "haben");
+        if(i<10){
+            lastTenOrders[i] = orders[Meal][Type];
+            i++;
+        }else{
+            i = 0;
+            lastTenOrders[i] = orders[Meal][Type];
+        }
     }
 
     public String getUsername(){
