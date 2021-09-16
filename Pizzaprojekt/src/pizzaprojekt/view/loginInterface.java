@@ -3,6 +3,8 @@ package pizzaprojekt.view;
 import pizzaprojekt.control.Doepi;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -17,11 +19,15 @@ public class loginInterface {
 
     public loginInterface(Doepi myDoepi){
         this.myDoepi = myDoepi;
-
-        System.out.println(getFileContent(new File("Pizzaprojekt/src/pizzaprojekt/database/datenbank.txt")));
-        // ToDo: Daten vergleichen fürs Login und Passwort
-
+        loginButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                myDoepi.switchFrame("order");
+            }
+        });
     }
+       // System.out.println(getFileContent(new File("Pizzaprojekt/src/pizzaprojekt/database/datenbank.txt")));
+        // ToDo: Daten vergleichen fürs Login und Passwort
 
     public JPanel getPanel(){
         return loginPanel;
