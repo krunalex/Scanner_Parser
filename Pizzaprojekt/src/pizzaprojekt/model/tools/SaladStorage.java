@@ -1,16 +1,17 @@
 package pizzaprojekt.model.tools;
 
 import pizzaprojekt.model.food.Salad;
+import pizzaprojekt.control.Doepi;
 
 public class SaladStorage {
 
     private double abundance = 100;
     private int numberKit = 35;
-    private double abundancePrice = 10;
-  //  private Doepi myDoepi;
+    private double abundancePrice = 2;
+    private Doepi doepi;
 
-    public SaladStorage(){
-
+    public SaladStorage(Doepi doepi){
+        this.doepi = doepi;
     }
 
     public double getAbundance() {
@@ -37,13 +38,13 @@ public class SaladStorage {
         this.abundancePrice = abundancePrice;
     }
 
-    public void createSalad(int saladType){
+    public void use(int saladType){
+        int newKit = 5;
         numberKit--;
         Salad s = new Salad(saladType);
-        //toDo Geld implememtieren, ein Budget für Doepi
-       /* if(numberKit == 0){
+        if(numberKit == 0){
             numberKit = 10;
-            // myDoepi.setMoney(-10);
-        } */
+            doepi.setMoney(doepi.getMoney() - newKit * abundancePrice);
+        }
     }
 }

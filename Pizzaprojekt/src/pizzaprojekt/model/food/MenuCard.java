@@ -2,7 +2,7 @@ package pizzaprojekt.model.food;
 
 public abstract class MenuCard {
 
-    protected int price;
+    protected double price;
     protected boolean orderReady;
     protected String[] ingredians;
 
@@ -12,11 +12,11 @@ public abstract class MenuCard {
         this.ingredians = ingredians;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
@@ -35,4 +35,7 @@ public abstract class MenuCard {
     public String[] getIngredians() {
         return ingredians;
     }
+
+    public abstract void use();
+
 }

@@ -18,12 +18,12 @@ public class Doepi {
     private foodInterface interface5;
 
     public static void main(String[] args) {
-        //todo Worker erstellen
+        Worker worker = new Worker();
         App myApp = new App();
-        Doepi myDoepi = new Doepi();
+        Doepi doepi = new Doepi();
         Furnace furnace = new Furnace();
-        SaladStorage saladStorage = new SaladStorage();
-        KebabSkewer kebabSkewer = new KebabSkewer();
+        SaladStorage saladStorage = new SaladStorage(doepi);
+       // KebabSkewer kebabSkewer = new KebabSkewer();
     }
 
     public Doepi(){

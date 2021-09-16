@@ -28,7 +28,7 @@ public class Furnace {
         this.available = available;
     }
 
-    public void bake(int type) throws InterruptedException {
+    public void use(int type) throws InterruptedException {
         if(getAvailable()){
             setAvailable(false);
             wait(500);
@@ -36,6 +36,4 @@ public class Furnace {
         }
         setAvailable(true);
     }
-
-
 }
