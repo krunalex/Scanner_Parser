@@ -2,8 +2,8 @@ package pizzaprojekt.model.food;
 
 public class Pizza extends MenuCard {
 
-    public Pizza(int type){
-        p(type);
+    public Pizza(int type) {
+        //p(type);
     }
 
     public String p(int Type){
@@ -11,5 +11,10 @@ public class Pizza extends MenuCard {
         ingredians[0]="Pizza magarita";
         ingredians[1]="Thunfischpizza";
         return ingredians[Type];
+    }
+
+    @Override
+    public void use() {
+
     }
 }

@@ -31,4 +31,9 @@ public class Drink extends MenuCard {
     public void setAbundance(double abundance) {
         this.abundance = abundance;
     }
+
+    @Override
+    public void use() {
+
+    }
 }

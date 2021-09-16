@@ -12,4 +12,9 @@ public class Salad extends MenuCard {
         ingredians[1]="Salat ohne Kaese!";
         return ingredians[Type];
     }
+
+    @Override
+    public void use() {
+
+    }
 }

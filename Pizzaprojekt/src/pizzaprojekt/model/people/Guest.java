@@ -6,40 +6,66 @@ public class Guest extends Human {
     private String password;
     private String favoriteFood;
     private double budget; // Todo: In der App sein Budget angeben
-    private String[][] orders;
+    private String[] orderMeal;
     private String[] lastTenOrders = new String[10];
-    int i = 0;
+    private int i = 0;
+    private int Meal;
+    private int Type;
 
     public Guest(){
         this.username = username;
         this.password = password;
         this.favoriteFood = favoriteFood;
         this.budget = budget;
+        setForename();
+        Meal = (int) Math.random()*3;
+        Type = (int) Math.random();
     }
 
     public void register(){
     }
 
-    public void login() {
+    public void setForename(){
+        nameList[0] = "Karl";
+        nameList[1] = "Hans";
+        nameList[2] = "Lucifer";
+        nameList[3] = "Thomas";
+        nameList[4] = "Iglob";
+        nameList[5] = "Fritz";
+        nameList[6] = "Jonn";
+        nameList[7] = "Sara";
+        nameList[8] = "Marie";
+        nameList[9] = "Karin";
+        int r = (int) Math.random()*10;
+        forename = nameList[2];
     }
 
-    public void doOrder(int Meal, int Type){
-        orders = new String[4][2];
-        orders[0][0] = "Doener ohne alles ";
-        orders[0][1] = "Doener mit alles ";
-        orders[1][0] = "Pizza Magarita ";
-        orders[1][1] = "Thunfischpizza";
-        orders[2][0] = "Salat ";
-        orders[2][1] = "Salat ohne Kaese ";
-        orders[3][0] = "Wasser";
-        System.out.println("Ich will " + orders[Meal][Type] + "haben");
+    public void doOrderMeal(int Meal){
+        String theOrder = " ";
+        orderMeal = new String[6];
+        int anzahl = (int) Math.random()*4+1;
+        orderMeal[0] = "Doener ohne alles ";
+        orderMeal[1] = "Doener mit alles ";
+        orderMeal[2] = "Pizza Magarita ";
+        orderMeal[3] = "Thunfischpizza";
+        orderMeal[4] = "Salat ";
+        orderMeal[5] = "Salat ohne Kaese ";
+        for(int i = 0;i<anzahl;i++){
+            int theMeal = (int) Math.random()*5;
+            theOrder = orderMeal[theMeal] + ", ";
+        }
+        System.out.println("Ich will" + theOrder + "haben");
         if(i<10){
-            lastTenOrders[i] = orders[Meal][Type];
+            lastTenOrders[i] = theOrder;
             i++;
         }else{
             i = 0;
-            lastTenOrders[i] = orders[Meal][Type];
+            lastTenOrders[i] = theOrder;
         }
+    }
+
+    public void login(){
+
     }
 
     public String getUsername(){
