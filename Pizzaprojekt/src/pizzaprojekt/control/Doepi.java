@@ -2,6 +2,7 @@ package pizzaprojekt.control;
 
 import pizzaprojekt.model.people.Worker;
 import pizzaprojekt.model.tools.Furnace;
+import pizzaprojekt.model.tools.KebabSkewer;
 import pizzaprojekt.model.tools.SaladStorage;
 import pizzaprojekt.view.*;
 
@@ -16,6 +17,7 @@ public class Doepi {
     private orderInterface interface3;
     private drinkInterface interface4;
     private foodInterface interface5;
+    private exitInterface interface6;
 
     public static void main(String[] args) {
         Worker worker = new Worker();
@@ -23,7 +25,6 @@ public class Doepi {
         Doepi doepi = new Doepi();
         Furnace furnace = new Furnace();
         SaladStorage saladStorage = new SaladStorage(doepi);
-       // KebabSkewer kebabSkewer = new KebabSkewer();
     }
 
     public Doepi(){
@@ -34,11 +35,12 @@ public class Doepi {
         myFrame = new JFrame("Doepi App");
         interface1 = new startInterface(this);
         interface2 = new loginInterface(this);
-        interface3 = new orderInterface(this);
+        interface3 = new orderInterface(this, interface5);
         interface4 = new drinkInterface(this);
         interface5 = new foodInterface(this);
+        interface6 = new exitInterface(this);
         myFrame.setVisible(true);
-        myFrame.setBounds(200,200,1000,750);
+        myFrame.setBounds(0,0,1000,1000);
         myFrame.setContentPane(interface1.getPanel());
     }
 
@@ -59,9 +61,16 @@ public class Doepi {
             case "food":
                 myFrame.setContentPane(interface5.getPanel());
                 break;
+            case "exit":
+                myFrame.setContentPane(interface6.getPanel());
+                break;
             default: myFrame.setContentPane(interface1.getPanel());
         }
         myFrame.revalidate();
+    }
+
+    public void closeFrame(){
+        myFrame.dispose();
     }
 
     public double getMoney(){

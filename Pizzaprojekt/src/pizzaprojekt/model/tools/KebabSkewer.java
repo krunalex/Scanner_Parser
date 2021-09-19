@@ -18,6 +18,10 @@ public class KebabSkewer{
         this.doepi = doepi;
     }
 
+    public KebabSkewer() {
+
+    }
+
     public double getStatus() {
         return status;
     }
@@ -26,7 +30,7 @@ public class KebabSkewer{
         status = status;
     }
 
-    public void use(){
+    public void useSkewer(){
         if(skewerLeft()){
             if (getConsumed){
                 status = status - 1.5;
@@ -38,7 +42,7 @@ public class KebabSkewer{
 
     public void makeKebab(int type){
         double productPrice = 1;
-        use();
+        useSkewer();
         Kebab kebab = new Kebab();
         doepi.setMoney(doepi.getMoney()- productPrice);
     }
