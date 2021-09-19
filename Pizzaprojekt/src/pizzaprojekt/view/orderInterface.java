@@ -1,7 +1,6 @@
 package pizzaprojekt.view;
 
 import pizzaprojekt.control.Doepi;
-import pizzaprojekt.view.foodInterface;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -24,7 +23,7 @@ public class orderInterface {
         updateButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                sumPriceLabel.setText("Ihr Gesamtpreis: " + foodInterface.getSumPrice());
+                sumPriceLabel.setText("Ihr Gesamtpreis: " + myFoodInterface.getFoodSumPrice());
             }
         });
         drinkButton.addActionListener(new ActionListener() {

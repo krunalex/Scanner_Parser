@@ -22,7 +22,7 @@ public class drinkInterface {
     private JButton removeJuice;
     private JButton removeLemonade;
     private Doepi myDoepi;
-    private int sumPrice;
+    private int drinkSumPrice;
     private int waterPrice = 1;
     private int waterNumber = 0;
     private int juicePrice = 3;
@@ -45,8 +45,8 @@ public class drinkInterface {
             public void actionPerformed(ActionEvent e) {
                 if(waterCounter < 5) {
                     waterCounter++;
-                    sumPrice = sumPrice + waterPrice;
-                    priceStatus.setText("Gesamtpreis: " + sumPrice + "€");
+                    drinkSumPrice = drinkSumPrice + waterPrice;
+                    priceStatus.setText("Gesamtpreis: " + drinkSumPrice + "€");
                     waterNumber++;
                     waterPiece.setText("Anzahl Wasser: " + waterNumber);
                 }else{
@@ -59,8 +59,8 @@ public class drinkInterface {
             public void actionPerformed(ActionEvent e) {
                 if(juiceCounter < 5) {
                     juiceCounter++;
-                    sumPrice = sumPrice + juicePrice;
-                    priceStatus.setText("Gesamtpreis: " + sumPrice + "€");
+                    drinkSumPrice = drinkSumPrice + juicePrice;
+                    priceStatus.setText("Gesamtpreis: " + drinkSumPrice + "€");
                     juiceNumber++;
                     juicePiece.setText("Anzahl Säfte: " + juiceNumber);
                 }else{
@@ -73,8 +73,8 @@ public class drinkInterface {
             public void actionPerformed(ActionEvent e) {
                 if(lemonadeCounter < 5) {
                     lemonadeCounter++;
-                    sumPrice = sumPrice + lemonadePrice;
-                    priceStatus.setText("Gesamtpreis: " + sumPrice + "€");
+                    drinkSumPrice = drinkSumPrice + lemonadePrice;
+                    priceStatus.setText("Gesamtpreis: " + drinkSumPrice + "€");
                     lemonadeNumber++;
                     lemonadePiece.setText("Anzahl Limonade: " + lemonadeNumber);
                 }else{
@@ -87,8 +87,8 @@ public class drinkInterface {
             public void actionPerformed(ActionEvent e) {
                 if (waterCounter > 0){
                     waterCounter--;
-                    sumPrice = sumPrice - waterPrice;
-                    priceStatus.setText("Gesamtpreis: " + sumPrice + "€");
+                    drinkSumPrice = drinkSumPrice - waterPrice;
+                    priceStatus.setText("Gesamtpreis: " + drinkSumPrice + "€");
                     waterNumber--;
                     waterPiece.setText("Anzahl Wasser: " + waterNumber);
                     counterLabel.setText("");
@@ -100,8 +100,8 @@ public class drinkInterface {
             public void actionPerformed(ActionEvent e) {
                 if (juiceCounter > 0){
                     juiceCounter--;
-                    sumPrice = sumPrice - juicePrice;
-                    priceStatus.setText("Gesamtpreis: " + sumPrice + "€");
+                    drinkSumPrice = drinkSumPrice - juicePrice;
+                    priceStatus.setText("Gesamtpreis: " + drinkSumPrice + "€");
                     juiceNumber--;
                     juicePiece.setText("Anzahl Säfte: " + juiceNumber);
                     counterLabel.setText("");
@@ -113,8 +113,8 @@ public class drinkInterface {
             public void actionPerformed(ActionEvent e) {
                 if (lemonadeCounter > 0){
                     lemonadeCounter--;
-                    sumPrice = sumPrice - lemonadePrice;
-                    priceStatus.setText("Gesamtpreis: " + sumPrice + "€");
+                    drinkSumPrice = drinkSumPrice - lemonadePrice;
+                    priceStatus.setText("Gesamtpreis: " + drinkSumPrice + "€");
                     lemonadeNumber--;
                     lemonadePiece.setText("Anzahl Limonade: " + lemonadeNumber);
                     counterLabel.setText("");

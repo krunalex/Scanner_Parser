@@ -25,7 +25,7 @@ public class foodInterface {
     private int doenerCounter = 0;
     private int pizzaCounter = 0;
     private int saladCounter = 0;
-    private int sumPrice;
+    private int foodSumPrice;
     private int doenerPrice = 5;
     private int doenerNumber = 0;
     private int pizzaPrice = 7;
@@ -45,8 +45,8 @@ public class foodInterface {
             public void actionPerformed(ActionEvent e) {
                 if(doenerCounter < 5) {
                     doenerCounter++;
-                    sumPrice = sumPrice + doenerPrice;
-                    priceStatus.setText("Gesamtpreis: " + sumPrice + "€");
+                    foodSumPrice = foodSumPrice + doenerPrice;
+                    priceStatus.setText("Gesamtpreis: " + foodSumPrice + "€");
                     doenerNumber++;
                     doenerPiece.setText("Anzahl Döner: " + doenerNumber);
                 }else{
@@ -59,8 +59,8 @@ public class foodInterface {
             public void actionPerformed(ActionEvent e) {
                 if(pizzaCounter < 5) {
                     pizzaCounter++;
-                    sumPrice = sumPrice + pizzaPrice;
-                    priceStatus.setText("Gesamtpreis: " + sumPrice + "€");
+                    foodSumPrice = foodSumPrice + pizzaPrice;
+                    priceStatus.setText("Gesamtpreis: " + foodSumPrice + "€");
                     pizzaNumber++;
                     pizzaPiece.setText("Anzahl Pizzen: " + pizzaNumber);
                 }else{
@@ -73,8 +73,8 @@ public class foodInterface {
             public void actionPerformed(ActionEvent e) {
                 if(saladCounter < 5) {
                     saladCounter++;
-                    sumPrice = sumPrice + saladPrice;
-                    priceStatus.setText("Gesamtpreis: " + sumPrice + "€");
+                    foodSumPrice = foodSumPrice + saladPrice;
+                    priceStatus.setText("Gesamtpreis: " + foodSumPrice + "€");
                     saladNumber++;
                     saladPiece.setText("Anzahl Salate: " + saladNumber);
                 }else{
@@ -87,8 +87,8 @@ public class foodInterface {
             public void actionPerformed(ActionEvent e) {
                 if (doenerCounter > 0){
                     doenerCounter--;
-                    sumPrice = sumPrice - doenerPrice;
-                    priceStatus.setText("Gesamtpreis: " + sumPrice + "€");
+                    foodSumPrice = foodSumPrice - doenerPrice;
+                    priceStatus.setText("Gesamtpreis: " + foodSumPrice + "€");
                     doenerNumber--;
                     doenerPiece.setText("Anzahl Döner: " + doenerNumber);
                     counterLabel.setText("");
@@ -100,8 +100,8 @@ public class foodInterface {
             public void actionPerformed(ActionEvent e) {
                 if (pizzaCounter > 0){
                     pizzaCounter--;
-                    sumPrice = sumPrice - pizzaPrice;
-                    priceStatus.setText("Gesamtpreis: " + sumPrice + "€");
+                    foodSumPrice = foodSumPrice - pizzaPrice;
+                    priceStatus.setText("Gesamtpreis: " + foodSumPrice + "€");
                     pizzaNumber--;
                     pizzaPiece.setText("Anzahl Pizzen: " + pizzaNumber);
                     counterLabel.setText("");
@@ -113,8 +113,8 @@ public class foodInterface {
             public void actionPerformed(ActionEvent e) {
                 if (saladCounter > 0){
                     saladCounter--;
-                    sumPrice = sumPrice - saladPrice;
-                    priceStatus.setText("Gesamtpreis: " + sumPrice + "€");
+                    foodSumPrice = foodSumPrice - saladPrice;
+                    priceStatus.setText("Gesamtpreis: " + foodSumPrice + "€");
                     saladNumber--;
                     saladPiece.setText("Anzahl Salate: " + saladNumber);
                     counterLabel.setText("");
@@ -129,8 +129,8 @@ public class foodInterface {
         });
     }
 
-    public int getSumPrice() {
-        return sumPrice;
+    public int getFoodSumPrice() {
+        return foodSumPrice;
     }
 
     public JPanel getPanel(){
