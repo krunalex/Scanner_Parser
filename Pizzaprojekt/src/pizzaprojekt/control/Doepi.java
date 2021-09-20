@@ -35,9 +35,9 @@ public class Doepi {
         myFrame = new JFrame("Doepi App");
         interface1 = new startInterface(this);
         interface2 = new loginInterface(this);
-        interface3 = new orderInterface(this, interface5);
-        interface4 = new drinkInterface(this);
         interface5 = new foodInterface(this);
+        interface4 = new drinkInterface(this);
+        interface3 = new orderInterface(this, interface5, interface4);
         interface6 = new exitInterface(this);
         myFrame.setVisible(true);
         myFrame.setBounds(0,0,1000,1000);

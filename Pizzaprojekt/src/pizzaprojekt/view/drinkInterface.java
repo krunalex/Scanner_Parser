@@ -130,6 +130,10 @@ public class drinkInterface {
 
     }
 
+    public int getDrinkSumPrice(){
+        return drinkSumPrice;
+    }
+
     public JPanel getPanel(){
         return drinkPanel;
     }

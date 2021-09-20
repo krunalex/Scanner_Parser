@@ -16,14 +16,18 @@ public class orderInterface {
     private JLabel sumPriceLabel;
     private JButton updateButton;
     private Doepi myDoepi;
-    private foodInterface foodInterface;
+    private foodInterface myFoodInterface;
+    private drinkInterface myDrinkInterface;
 
-    public orderInterface(Doepi myDoepi, foodInterface myFoodInterface){
+    public orderInterface(Doepi myDoepi, foodInterface myFoodInterface, drinkInterface myDrinkInterface){
         this.myDoepi = myDoepi;
         updateButton.addActionListener(new ActionListener() {
+            public int addUpSumPrice(foodInterface myFoodInterface, drinkInterface myDrinkInterface){
+                return (myFoodInterface.getFoodSumPrice() + myDrinkInterface.getDrinkSumPrice());
+            }
             @Override
             public void actionPerformed(ActionEvent e) {
-                sumPriceLabel.setText("Ihr Gesamtpreis: " + myFoodInterface.getFoodSumPrice());
+                sumPriceLabel.setText("Ihr Gesamtpreis: " + addUpSumPrice(myFoodInterface, myDrinkInterface) + "€");
             }
         });
         drinkButton.addActionListener(new ActionListener() {
