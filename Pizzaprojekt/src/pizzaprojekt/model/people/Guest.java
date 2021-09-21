@@ -5,7 +5,7 @@ public class Guest extends Human {
     private String username;
     private String password;
     private String favoriteFood;
-    private double budget; // Todo: In der App sein Budget angeben
+    private double budget;
     private String[] orderMeal;
     private String[] lastTenOrders = new String[10];
     private int i = 0;
@@ -65,7 +65,7 @@ public class Guest extends Human {
     }
 
     public void login(){
-
+        setBudget(Math.random()*60+20);
     }
 
     public String getUsername(){

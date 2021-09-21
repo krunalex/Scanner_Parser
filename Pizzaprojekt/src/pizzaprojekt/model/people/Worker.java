@@ -12,7 +12,6 @@ public class Worker extends Human {
 
     public Worker(){
 
-
     }
 
     public void setFurnace(Furnace furnace) {

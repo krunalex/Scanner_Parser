@@ -7,6 +7,7 @@ import pizzaprojekt.model.food.Pizza;
 import pizzaprojekt.model.food.Salad;
 import pizzaprojekt.model.tools.*;
 import pizzaprojekt.view.*;
+import pizzaprojekt.model.people.*;
 
 import javax.swing.*;
 
@@ -22,7 +23,6 @@ public class Doepi {
     private exitInterface interface6;
 
     public static void main(String[] args) {
-        Worker worker = new Worker();
         App myApp = new App();
         Doepi doepi = new Doepi();
         Furnace furnace = new Furnace();
@@ -83,7 +83,9 @@ public class Doepi {
         return balance;
     }
 
-    public void setMoney(double money){
-        this.money = money;
+    public void makeKebabSkewer(){
+        KebabSkewer kebabSkewer = new KebabSkewer();
+        money.setBalance(-1);
+        kebabSkewer.setNumberSkewer(kebabSkewer.getNumberSkewer() + 1);
     }
 }

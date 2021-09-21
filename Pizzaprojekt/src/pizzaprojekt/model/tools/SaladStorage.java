@@ -38,12 +38,6 @@ public class SaladStorage {
     }
 
     public void use(int saladType){
-        int newKit = 5;
-        numberKit--;
-        Salad s = new Salad(saladType);
-        if(numberKit == 0){
-            numberKit = 10;
-            doepi.setMoney(doepi.getMoney() - newKit * abundancePrice);
-        }
+
     }
 }
