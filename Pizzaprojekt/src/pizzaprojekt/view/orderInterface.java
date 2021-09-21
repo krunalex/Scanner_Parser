@@ -45,7 +45,7 @@ public class orderInterface {
         finishOrderButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                myDoepi.switchFrame("exit");
+                myDoepi.switchFrame("worker");
             }
         });
     }

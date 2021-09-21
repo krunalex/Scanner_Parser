@@ -12,16 +12,11 @@ public class KebabSkewer{
     private Doepi doepi;
     private Money money;
 
-    public KebabSkewer(Kebab kebab, Doepi doepi){
+    public KebabSkewer(Money money){
         status = 100;
         numberSkewer = 5;
-        this.kebab = kebab;
-        this.doepi = doepi;
     }
 
-    public KebabSkewer() {
-
-    }
 
     public double getStatus() {
         return status;
@@ -43,10 +38,11 @@ public class KebabSkewer{
         }else{
             doepi.makeKebabSkewer();
         }
+        money.setBalance(5);
     }
 
     public void makeKebab(){
-        Kebab kebab = new Kebab();
+        Kebab kebab = new Kebab(this);
     }
 
     public int getNumberSkewer(){
@@ -57,7 +53,7 @@ public class KebabSkewer{
         this.numberSkewer = numberSkewer;
     }
 
-   /* public boolean skewerLeft(){
+   public boolean skewerLeft(){
         if (status <= 0){
             numberSkewer = numberSkewer - 1;
             return true;
@@ -65,5 +61,5 @@ public class KebabSkewer{
             System.out.println("Alle Dönerspieße sind leer!");
             return false;
         }
-    }*/
+    }
 }

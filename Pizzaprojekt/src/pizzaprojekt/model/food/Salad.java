@@ -1,20 +1,17 @@
 package pizzaprojekt.model.food;
 
+import pizzaprojekt.model.tools.SaladStorage;
+
 public class Salad extends MenuCard {
 
-    public Salad(int saladType){
-        s(saladType);
+    private SaladStorage saladStorage;
+    public Salad(SaladStorage saladStorage){
+
     }
 
-    public String s(int Type){
-        ingredians = new String[2];
-        ingredians[0]="Salat mit alles!";
-        ingredians[1]="Salat ohne Kaese!";
-        return ingredians[Type];
-    }
 
     @Override
     public void use() {
-
+        saladStorage.makeSalad();
     }
 }

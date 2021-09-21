@@ -6,7 +6,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class WorkerInterface {
+public class workerInterface {
     private JButton confirmButton;
     private JLabel profitLabel;
     private JLabel orderLabel;
@@ -26,7 +26,7 @@ public class WorkerInterface {
     private String name;
     private int profit = 0;
 
-    public WorkerInterface(Doepi myDoepi, foodInterface myFoodInterface, drinkInterface myDrinkInterface, loginInterface myLoginInterface){
+    public workerInterface(Doepi myDoepi, foodInterface myFoodInterface, drinkInterface myDrinkInterface, loginInterface myLoginInterface){
         this.myDoepi = myDoepi;
         updateButton.addActionListener(new ActionListener() {
             @Override
@@ -48,7 +48,7 @@ public class WorkerInterface {
         confirmButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                myDoepi.switchFrame("login");
+                myDoepi.switchFrame("exit");
             }
         });
     }

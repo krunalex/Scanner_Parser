@@ -3,7 +3,6 @@ package pizzaprojekt.model.people;
 import pizzaprojekt.model.tools.Furnace;
 import pizzaprojekt.model.tools.KebabSkewer;
 import pizzaprojekt.model.tools.SaladStorage;
-import pizzaprojekt.model.food.Drink;
 
 public class Worker extends Human {
     private Furnace furnace;
@@ -46,7 +45,7 @@ public class Worker extends Human {
         forename = nameList[2];
     }
 
-    public void processOrder(int food, int type){
+    /*public void processOrder(int food, int type){
         switch(food){
             case 1: kebabSkewer.makeKebab(type);
             break;
@@ -62,5 +61,5 @@ public class Worker extends Human {
             case 4: Drink drink = new Drink(type);
             break;
         }
-    }
+    }*/
 }

@@ -7,13 +7,11 @@ import pizzaprojekt.model.food.Pizza;
 import pizzaprojekt.model.food.Salad;
 import pizzaprojekt.model.tools.*;
 import pizzaprojekt.view.*;
-import pizzaprojekt.model.people.*;
 
 import javax.swing.*;
 
 public class Doepi {
 
-    private double money = 1000;
     private JFrame myFrame;
     private startInterface interface1;
     private loginInterface interface2;
@@ -21,15 +19,25 @@ public class Doepi {
     private drinkInterface interface4;
     private foodInterface interface5;
     private exitInterface interface6;
+    private workerInterface interface7;
+    private Money money;
+    private int balance = 0;
+    private MenuCard[] mc;
+    private Furnace furnace;
+    private SaladStorage saladStorage;
+    private KebabSkewer kebabSkewer;
 
     public static void main(String[] args) {
         App myApp = new App();
         Doepi doepi = new Doepi();
-        Furnace furnace = new Furnace();
-        SaladStorage saladStorage = new SaladStorage(doepi);
+        Money money = new Money();
+
     }
 
     public Doepi(){
+        furnace = new Furnace(money);
+        saladStorage = new SaladStorage(money);
+        kebabSkewer = new KebabSkewer(money);
         createFrame();
     }
 
@@ -42,6 +50,7 @@ public class Doepi {
         interface4 = new drinkInterface(this);
         interface3 = new orderInterface(this, interface5, interface4);
         interface6 = new exitInterface(this);
+        interface7 = new workerInterface(this,interface5,interface4,interface2);
         myFrame.setVisible(true);
         myFrame.setBounds(0,0,1000,1000);
         myFrame.setContentPane(interface1.getPanel());
@@ -75,6 +84,23 @@ public class Doepi {
         myFrame.revalidate();
     }
 
+    public void doTheOrder(){
+        mc = new MenuCard[3];
+        mc[0] = new Pizza(furnace);
+        mc[1] = new Kebab(kebabSkewer);
+        mc[2] = new Salad(saladStorage);
+        for(int i = 0;i<interface5.getPizzaNumber();i++){
+            ((Pizza)mc[0]).use();
+        }
+        for(int i = 0;i<interface5.getDoenerNumber();i++) {
+            ((Kebab)mc[1]).use();
+        }
+        for(int i = 0;i<interface5.getSaladNumber();i++) {
+            ((Salad)mc[2]).use();
+        }
+        balance = money.getBalance();
+    }
+
     public void closeFrame(){
         myFrame.dispose();
     }
@@ -84,7 +110,7 @@ public class Doepi {
     }
 
     public void makeKebabSkewer(){
-        KebabSkewer kebabSkewer = new KebabSkewer();
+        KebabSkewer kebabSkewer = new KebabSkewer(money);
         money.setBalance(-1);
         kebabSkewer.setNumberSkewer(kebabSkewer.getNumberSkewer() + 1);
     }

@@ -1,20 +1,16 @@
 package pizzaprojekt.model.food;
 
+import pizzaprojekt.model.tools.Furnace;
+
 public class Pizza extends MenuCard {
 
-    public Pizza(int type) {
-        //p(type);
-    }
+    private Furnace furnace;
+    public Pizza(Furnace furnace) {
 
-    public String p(int Type){
-        ingredians = new String[2];
-        ingredians[0]="Pizza magarita";
-        ingredians[1]="Thunfischpizza";
-        return ingredians[Type];
     }
 
     @Override
     public void use() {
-
+        furnace.makePizza();
     }
 }
