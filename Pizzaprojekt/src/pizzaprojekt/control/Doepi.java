@@ -79,8 +79,8 @@ public class Doepi {
         myFrame.dispose();
     }
 
-    public double getMoney(){
-        return money;
+    public int getBalance() {
+        return balance;
     }
 
     public void setMoney(double money){
