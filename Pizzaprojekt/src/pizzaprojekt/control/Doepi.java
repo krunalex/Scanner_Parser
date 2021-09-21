@@ -1,10 +1,7 @@
 package pizzaprojekt.control;
 
 import com.formdev.flatlaf.FlatDarkLaf;
-import pizzaprojekt.model.food.Kebab;
-import pizzaprojekt.model.food.MenuCard;
-import pizzaprojekt.model.food.Pizza;
-import pizzaprojekt.model.food.Salad;
+import pizzaprojekt.model.food.*;
 import pizzaprojekt.model.tools.*;
 import pizzaprojekt.view.*;
 
@@ -20,21 +17,20 @@ public class Doepi {
     private foodInterface interface5;
     private exitInterface interface6;
     private workerInterface interface7;
-    private Money money;
+    private final Money money;
     private int balance = 0;
-    private MenuCard[] mc;
-    private Furnace furnace;
-    private SaladStorage saladStorage;
-    private KebabSkewer kebabSkewer;
+    private final Furnace furnace;
+    private final SaladStorage saladStorage;
+    private final KebabSkewer kebabSkewer;
 
     public static void main(String[] args) {
         App myApp = new App();
         Doepi doepi = new Doepi();
-        Money money = new Money();
 
     }
 
     public Doepi(){
+        money = new Money();
         furnace = new Furnace(money);
         saladStorage = new SaladStorage(money);
         kebabSkewer = new KebabSkewer(money);
@@ -85,19 +81,21 @@ public class Doepi {
     }
 
     public void doTheOrder(){
-        mc = new MenuCard[3];
+        MenuCard[] mc = new MenuCard[4];
         mc[0] = new Pizza(furnace);
         mc[1] = new Kebab(kebabSkewer);
         mc[2] = new Salad(saladStorage);
+        mc[3] = new Drink(money, interface4.getWaterNumber(),interface4.getJuiceNumber(),interface4.getLemonadeNumber());
         for(int i = 0;i<interface5.getPizzaNumber();i++){
-            ((Pizza)mc[0]).use();
+            ((Pizza) mc[0]).use();
         }
         for(int i = 0;i<interface5.getDoenerNumber();i++) {
-            ((Kebab)mc[1]).use();
+            ((Kebab) mc[1]).use();
         }
         for(int i = 0;i<interface5.getSaladNumber();i++) {
-            ((Salad)mc[2]).use();
+            ((Salad) mc[2]).use();
         }
+
         balance = money.getBalance();
     }
 

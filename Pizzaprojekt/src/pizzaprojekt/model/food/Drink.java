@@ -1,39 +1,27 @@
 package pizzaprojekt.model.food;
 
+import pizzaprojekt.model.tools.Money;
 public class Drink extends MenuCard {
 
-    protected String variety;
-    protected double abundance; // abundace = Fülle
+    private int waterPrice = 1;
+    private int juicePrice = 3;
+    private int lemonadePrice = 4;
+    private int totalPrice = 0;
+    private Money money;
 
-    public Drink(int type){
-        super();
-        setVariety(type);
+    public Drink(Money money, int numberWater, int numberJuice, int numberLemonade){
+        totalPrice = numberWater*waterPrice + numberJuice*juicePrice + numberLemonade*lemonadePrice;
+        money.setBalance(totalPrice);
     }
 
-    public String getVariety() {
-        return variety;
-    }
-
-    public void setVariety(int type) {
-        this.variety = variety;
-        if(type == 0){
-            variety = "Water";
-        }else if(type == 1){
-            variety = "Juice";
-        }else if(type == 2){
-            variety = "Lemonade";
-        }
-    }
-    public double getAbundance() {
-        return abundance;
-    }
-
-    public void setAbundance(double abundance) {
-        this.abundance = abundance;
+    public int getTotalPrice() {
+        return totalPrice;
     }
 
     @Override
     public void use() {
 
     }
+
+
 }

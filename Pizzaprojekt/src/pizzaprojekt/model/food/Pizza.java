@@ -13,4 +13,5 @@ public class Pizza extends MenuCard {
     public void use() {
         furnace.makePizza();
     }
+
 }

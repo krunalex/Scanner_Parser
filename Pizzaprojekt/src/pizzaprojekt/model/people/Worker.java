@@ -13,6 +13,10 @@ public class Worker extends Human {
 
     }
 
+    @Override
+    public void setForename() {
+
+    }
     public void setFurnace(Furnace furnace) {
         this.furnace = furnace;
     }
@@ -37,29 +41,5 @@ public class Worker extends Human {
         return saladStorage;
     }
 
-    public void setForename() {
-        nameList[0] = "Greed";
-        nameList[1] = "Choco";
-        nameList[2] = "Bam";
-        int r = (int) Math.random()*2;
-        forename = nameList[2];
-    }
 
-    /*public void processOrder(int food, int type){
-        switch(food){
-            case 1: kebabSkewer.makeKebab(type);
-            break;
-            case 2:
-                try {
-                    furnace.use(type);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                break;
-            case 3: saladStorage.use(type);
-            break;
-            case 4: Drink drink = new Drink(type);
-            break;
-        }
-    }*/
 }

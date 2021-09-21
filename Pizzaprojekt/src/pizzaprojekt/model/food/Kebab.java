@@ -13,5 +13,6 @@ public class Kebab extends MenuCard {
         kebabSkewer.useSkewer();
     }
 
+
 }
 

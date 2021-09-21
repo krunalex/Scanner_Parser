@@ -17,6 +17,7 @@ public class workerInterface {
     private foodInterface myFoodInterface;
     private drinkInterface myDrinkInterface;
     private loginInterface myLoginInterface;
+    private orderInterface myorderInterface;
     private int doener = 0;
     private int pizza = 0;
     private int salad = 0;

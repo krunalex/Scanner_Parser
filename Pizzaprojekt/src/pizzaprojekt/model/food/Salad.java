@@ -14,4 +14,5 @@ public class Salad extends MenuCard {
     public void use() {
         saladStorage.makeSalad();
     }
+
 }
