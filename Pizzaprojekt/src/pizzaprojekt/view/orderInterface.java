@@ -46,6 +46,7 @@ public class orderInterface {
             @Override
             public void actionPerformed(ActionEvent e) {
                 myDoepi.switchFrame("worker");
+                myDoepi.doTheOrder();
             }
         });
     }

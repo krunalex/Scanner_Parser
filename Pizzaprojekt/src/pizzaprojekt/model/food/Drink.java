@@ -1,6 +1,10 @@
 package pizzaprojekt.model.food;
 
+import pizzaprojekt.model.tools.Furnace;
+import pizzaprojekt.model.tools.KebabSkewer;
 import pizzaprojekt.model.tools.Money;
+import pizzaprojekt.model.tools.SaladStorage;
+
 public class Drink extends MenuCard {
 
     private int waterPrice = 1;
@@ -18,10 +22,19 @@ public class Drink extends MenuCard {
         return totalPrice;
     }
 
+
     @Override
-    public void use() {
+    public void use(Furnace furnace) {
 
     }
 
+    @Override
+    public void use(SaladStorage saladStorage) {
 
+    }
+
+    @Override
+    public void use(KebabSkewer kebabSkewer) {
+
+    }
 }

@@ -1,5 +1,9 @@
 package pizzaprojekt.model.food;
 
+import pizzaprojekt.model.tools.Furnace;
+import pizzaprojekt.model.tools.KebabSkewer;
+import pizzaprojekt.model.tools.SaladStorage;
+
 public abstract class MenuCard {
 
     protected double price;
@@ -36,6 +40,10 @@ public abstract class MenuCard {
         return ingredians;
     }
 
-    public abstract void use();
 
+    public abstract void use(Furnace furnace);
+
+    public abstract void use(SaladStorage saladStorage);
+
+    public abstract void use(KebabSkewer kebabSkewer);
 }

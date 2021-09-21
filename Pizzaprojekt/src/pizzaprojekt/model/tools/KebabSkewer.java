@@ -15,6 +15,7 @@ public class KebabSkewer{
     public KebabSkewer(Money money){
         status = 100;
         numberSkewer = 5;
+        this.money = money;
     }
 
 
@@ -30,7 +31,6 @@ public class KebabSkewer{
         if(numberSkewer >= 1){
             if (getConsumed){
                 status = status - 1.5;
-                makeKebab();
                 if (status <= 0) {
                     doepi.makeKebabSkewer();
                 }

@@ -82,18 +82,15 @@ public class Doepi {
 
     public void doTheOrder(){
         MenuCard[] mc = new MenuCard[4];
-        mc[0] = new Pizza(furnace);
-        mc[1] = new Kebab(kebabSkewer);
-        mc[2] = new Salad(saladStorage);
         mc[3] = new Drink(money, interface4.getWaterNumber(),interface4.getJuiceNumber(),interface4.getLemonadeNumber());
         for(int i = 0;i<interface5.getPizzaNumber();i++){
-            ((Pizza) mc[0]).use();
+            mc[0] = new Pizza(this.furnace);
         }
         for(int i = 0;i<interface5.getDoenerNumber();i++) {
-            ((Kebab) mc[1]).use();
+            mc[1] = new Kebab(this.kebabSkewer);
         }
         for(int i = 0;i<interface5.getSaladNumber();i++) {
-            ((Salad) mc[2]).use();
+            mc[2] = new Salad(this.saladStorage);
         }
         balance = money.getBalance();
     }

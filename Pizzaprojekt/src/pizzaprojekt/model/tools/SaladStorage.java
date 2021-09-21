@@ -1,7 +1,5 @@
 package pizzaprojekt.model.tools;
 
-import pizzaprojekt.model.food.Salad;
-
 public class SaladStorage {
 
     private int abundance = 40;
@@ -40,10 +38,9 @@ public class SaladStorage {
     public void makeSalad(){
         abundance--;
         if(abundance == 0){
-            abundance = 39; //39, weil sofort wieder einer genutzt wird
+            abundance = 39;
             money.setBalance(-10);
         }
         money.setBalance(3);
-        Salad salad = new Salad(this);
     }
 }
