@@ -1,9 +1,11 @@
 package pizzaprojekt.control;
 
-import pizzaprojekt.model.people.Worker;
-import pizzaprojekt.model.tools.Furnace;
-import pizzaprojekt.model.tools.KebabSkewer;
-import pizzaprojekt.model.tools.SaladStorage;
+import com.formdev.flatlaf.FlatDarkLaf;
+import pizzaprojekt.model.food.Kebab;
+import pizzaprojekt.model.food.MenuCard;
+import pizzaprojekt.model.food.Pizza;
+import pizzaprojekt.model.food.Salad;
+import pizzaprojekt.model.tools.*;
 import pizzaprojekt.view.*;
 
 import javax.swing.*;
@@ -32,6 +34,7 @@ public class Doepi {
     }
 
     public void createFrame(){
+        FlatDarkLaf.setup();
         myFrame = new JFrame("Doepi App");
         interface1 = new startInterface(this);
         interface2 = new loginInterface(this);
@@ -60,6 +63,9 @@ public class Doepi {
                 break;
             case "food":
                 myFrame.setContentPane(interface5.getPanel());
+                break;
+            case "worker":
+                myFrame.setContentPane(interface7.getPanel());
                 break;
             case "exit":
                 myFrame.setContentPane(interface6.getPanel());

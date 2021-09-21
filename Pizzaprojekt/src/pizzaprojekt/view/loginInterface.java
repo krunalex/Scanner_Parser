@@ -5,10 +5,7 @@ import pizzaprojekt.control.Doepi;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class loginInterface {
     private JPanel loginPanel;

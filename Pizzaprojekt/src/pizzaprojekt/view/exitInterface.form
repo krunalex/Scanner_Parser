@@ -14,7 +14,7 @@
         </constraints>
         <properties>
           <font size="20" style="1"/>
-          <text value="Vielen Dank für ihre Bestellung, ihr Essen erwartet sie gleich!"/>
+          <text value="App schließen"/>
         </properties>
       </component>
       <component id="3eb79" class="javax.swing.JButton" binding="closeAppButton">

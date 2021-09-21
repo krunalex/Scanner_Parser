@@ -129,6 +129,18 @@ public class foodInterface {
         });
     }
 
+    public int getDoenerNumber(){
+        return doenerNumber;
+    }
+
+    public int getPizzaNumber() {
+        return pizzaNumber;
+    }
+
+    public int getSaladNumber() {
+        return saladNumber;
+    }
+
     public int getFoodSumPrice() {
         return foodSumPrice;
     }

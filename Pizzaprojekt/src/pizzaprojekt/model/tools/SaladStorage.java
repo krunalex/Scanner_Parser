@@ -1,6 +1,5 @@
 package pizzaprojekt.model.tools;
 
-import pizzaprojekt.model.food.Salad;
 import pizzaprojekt.control.Doepi;
 
 public class SaladStorage {

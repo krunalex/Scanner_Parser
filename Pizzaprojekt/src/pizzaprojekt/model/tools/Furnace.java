@@ -1,7 +1,5 @@
 package pizzaprojekt.model.tools;
 
-import pizzaprojekt.model.food.Pizza;
-
 public class Furnace {
     private double timer;
     private boolean available;
