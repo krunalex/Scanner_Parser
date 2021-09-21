@@ -39,7 +39,7 @@ public class workerInterface {
                 juice = myDrinkInterface.getJuiceNumber();
                 lemonade = myDrinkInterface.getLemonadeNumber();
                 name = myLoginInterface.getUsername();
-                profit = myDoepi.getBalance();
+                profit = myFoodInterface.getFoodSumPrice() + myDrinkInterface.getDrinkSumPrice();
                 profitLabel.setText("Profit bisher: " + profit + "€");
                 orderLabel.setText("Ich will " + doener + " Döner, " + pizza + " Pizza, " + salad + " Salat, " + water + " Wasser, "
                         + juice + " Saft und " + lemonade + " Limonade - Bestellt von:  " + name );

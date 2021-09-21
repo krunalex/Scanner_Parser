@@ -17,11 +17,11 @@ public class Doepi {
     private foodInterface interface5;
     private exitInterface interface6;
     private workerInterface interface7;
-    private final Money money;
+    private Money money;
     private int balance = 0;
-    private final Furnace furnace;
-    private final SaladStorage saladStorage;
-    private final KebabSkewer kebabSkewer;
+    private Furnace furnace;
+    private SaladStorage saladStorage;
+    private KebabSkewer kebabSkewer;
 
     public static void main(String[] args) {
         App myApp = new App();
@@ -95,7 +95,6 @@ public class Doepi {
         for(int i = 0;i<interface5.getSaladNumber();i++) {
             ((Salad) mc[2]).use();
         }
-
         balance = money.getBalance();
     }
 
