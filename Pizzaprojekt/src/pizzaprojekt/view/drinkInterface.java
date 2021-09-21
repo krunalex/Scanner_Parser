@@ -137,4 +137,16 @@ public class drinkInterface {
     public JPanel getPanel(){
         return drinkPanel;
     }
+
+    public int getWaterNumber() {
+        return waterNumber;
+    }
+
+    public int getJuiceNumber() {
+        return juiceNumber;
+    }
+
+    public int getLemonadeNumber() {
+        return lemonadeNumber;
+    }
 }

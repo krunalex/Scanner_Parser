@@ -15,6 +15,7 @@ public class loginInterface {
     private JButton loginButton;
     private JLabel passwordWrong;
     private Doepi myDoepi;
+    private String username;
 
     public loginInterface(Doepi myDoepi){
         this.myDoepi = myDoepi;
@@ -24,6 +25,7 @@ public class loginInterface {
                 char [] input = passwordField1.getPassword();
                 if(checkIfCorrect(input)){
                     myDoepi.switchFrame("order");
+                    username = textField1.getText();
                 }else{
                     passwordWrong.setText("Falsches Passwort. Versuch es erneut!");
                 }
@@ -46,5 +48,9 @@ public class loginInterface {
         }
         Arrays.fill(correctPass, '0');
         return isCorrect;
+    }
+
+    public String getUsername() {
+        return username;
     }
 }
