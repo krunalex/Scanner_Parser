@@ -18,6 +18,10 @@ public abstract class Food { // Abstrakte Klasse
         return false;
     }
 
-    public abstract void eat(); // Abstrakte Methode
+    public void eat(){
+        System.out.println("Ich esse etwas.");
+    }
+
+    public abstract void bestellen();
 
 }
