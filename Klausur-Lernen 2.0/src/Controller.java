@@ -4,7 +4,7 @@ public class Controller {
 
     public Controller(){
         fahrzeugList = new List<>();
-        insertAutos(10);
+        insertAutos(500);
     }
 
     public void insertAutos(int n){
@@ -24,7 +24,7 @@ public class Controller {
             }
             fahrzeugList.next();
         }
-        //System.out.println("Es befinden sich: " + counter + " Autos mit der Nummer: " + n);
+        System.out.println("Es befinden sich: " + counter + " Autos mit der Nummer: " + n);
     }
 
     public void allPS(){
@@ -34,7 +34,7 @@ public class Controller {
             allPS = allPS + fahrzeugList.getContent().getPs();
             fahrzeugList.next();
         }
-       // System.out.println("Die Gesamte PS sind: " + allPS);
+       System.out.println("Die Gesamte PS sind: " + allPS);
     }
 
     public void onlyThreeRad(){
@@ -63,5 +63,18 @@ public class Controller {
             }
             fahrzeugList.next();
         }
+    }
+
+    public void deleteCar(int n){
+        int counter = 0;
+        fahrzeugList.toFirst();
+        while(fahrzeugList.hasAccess()){
+            if(fahrzeugList.getContent().getNummer() == n){
+                fahrzeugList.remove();
+                counter++;
+            }
+            fahrzeugList.next();
+        }
+        System.out.println("Es wurden so viele Autos gelöscht: " + counter);
     }
 }
